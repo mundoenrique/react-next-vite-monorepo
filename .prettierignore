@@ -1,0 +1,13 @@
+.next/
+.turbo/
+.pnpm-store/
+.vercel/
+.yarn/
+build/
+dist/
+coverage/
+node_modules/
+shadcn/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock

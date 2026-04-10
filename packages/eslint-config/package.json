@@ -1,0 +1,35 @@
+{
+  "name": "@repo/eslint-config",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "prettier --check \"*.mjs\" \"README.md\"",
+    "check-types": "node --check eslint.config.base.mjs && node --check eslint.config.react.mjs && node --check eslint.config.next.mjs && node --check eslint.config.vite.mjs"
+  },
+  "exports": {
+    "./eslint.base": "./eslint.config.base.mjs",
+    "./eslint.react": "./eslint.config.react.mjs",
+    "./eslint.next": "./eslint.config.next.mjs",
+    "./eslint.vite": "./eslint.config.vite.mjs"
+  },
+  "files": [
+    "*.mjs",
+    "*.md"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@next/eslint-plugin-next": "^16.2.0",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "16.2.2",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsdoc": "^62.9.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-dom": "^2.13.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "eslint-plugin-react-x": "^2.13.0",
+    "eslint-plugin-turbo": "^2.9.5",
+    "typescript-eslint": "^8.58.1"
+  }
+}

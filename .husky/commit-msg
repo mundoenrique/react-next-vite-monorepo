@@ -1,0 +1,16 @@
+echo ""
+echo ">>> HUSKY COMMIT-MSG RUNNING <<<"
+echo "Validating commit message with commitlint."
+echo ""
+
+if ! npx --no -- commitlint --edit "$1"; then
+	echo ""
+	echo ">>> HUSKY COMMIT-MSG FAILED <<<"
+	echo "Review allowed types and examples in:"
+	echo "  - commitlint.config.mjs"
+	echo "  - COMMIT_CONVENTION.md"
+	echo ""
+	exit 1
+fi
+
+echo ">>> HUSKY COMMIT-MSG: validations completed. <<<"

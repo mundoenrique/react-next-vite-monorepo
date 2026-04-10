@@ -1,0 +1,18 @@
+{
+  "name": "@repo/typescript-config",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "prettier --check \"*.json\" \"README.md\"",
+    "check-types": "node -e \"const fs=require('node:fs'); ['tsconfig.base.json','tsconfig.next.json','tsconfig.vite.app.json','tsconfig.vite.node.json'].forEach((f)=>JSON.parse(fs.readFileSync(f,'utf8')));\""
+  },
+  "exports": {
+    "./tsconfig.base": "./tsconfig.base.json",
+    "./tsconfig.next": "./tsconfig.next.json",
+    "./tsconfig.vite.app": "./tsconfig.vite.app.json",
+    "./tsconfig.vite.node": "./tsconfig.vite.node.json"
+  },
+  "files": [
+    "*.json"
+  ]
+}

@@ -1,0 +1,21 @@
+echo ""
+echo ">>> HUSKY PRE-COMMIT RUNNING (staged formatting checks) <<<"
+echo "Validating staged files with lint-staged (check-only mode)."
+echo ""
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT" || exit 1
+
+if ! npx lint-staged; then
+	echo ""
+	echo ">>> HUSKY PRE-COMMIT FAILED <<<"
+	echo "No files were auto-modified."
+	echo "Run these commands to inspect and fix issues:"
+	echo "  1) npx lint-staged"
+	echo "  2) npm run lint"
+	echo "  3) npm run format:check"
+	echo ""
+	exit 1
+fi
+
+echo ">>> HUSKY PRE-COMMIT: validations completed. <<<"
