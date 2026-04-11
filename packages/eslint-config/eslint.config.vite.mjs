@@ -7,7 +7,7 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 export default defineConfig([
   ...base,
   ...react,
-  globalIgnores(['dist', 'coverage', 'shadcn', 'node_modules', '**/*.d.ts', '**/*.d.ts.map']),
+  globalIgnores(['dist']),
   {
     files: ['vite.config.ts'],
     languageOptions: {

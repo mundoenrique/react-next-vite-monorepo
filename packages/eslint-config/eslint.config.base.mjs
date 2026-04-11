@@ -4,9 +4,10 @@ import jsdoc from 'eslint-plugin-jsdoc';
 import tseslint from 'typescript-eslint';
 import turboPlugin from 'eslint-plugin-turbo';
 import importPlugin from 'eslint-plugin-import';
-import { defineConfig } from 'eslint/config';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default defineConfig([
+  globalIgnores(['node_modules', 'coverage', '**/*.d.ts', '**/*.d.ts.map']),
   {
     extends: [js.configs.recommended, tseslint.configs.recommended],
     languageOptions: {
