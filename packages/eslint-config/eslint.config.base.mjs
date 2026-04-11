@@ -118,6 +118,13 @@ export default defineConfig([
     },
   },
   {
+    files: ['packages/shadcn-ui/src/**'],
+    rules: {
+      // shadcn-generated files keep their own import style; avoid noisy warnings in pre-commit hooks.
+      'import/order': 'off',
+    },
+  },
+  {
     files: ['**/*.{test,spec}.{ts,tsx}'],
     rules: {
       '@typescript-eslint/no-misused-promises': 'off',
