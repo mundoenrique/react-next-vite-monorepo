@@ -11,3 +11,5 @@ shadcn/
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
+packages/shadcn-ui/src/**
+!packages/shadcn-ui/src/index.ts
