@@ -1,3 +1,4 @@
+import { Input } from '@repo/shadcn-ui/components/input';
 import { Button } from '@repo/ui/button';
 import { useState } from 'react';
 
@@ -58,6 +59,13 @@ function App() {
         <Button appName="web" className="secondary">
           Open alert
         </Button>
+        <Input
+          name="name"
+          id="name"
+          placeholder="Buscar héroes, villanos, poderes y equipos..."
+          className="h-12 pl-12 text-lg"
+          autoComplete="off"
+        />
       </section>
 
       <div className="ticks"></div>

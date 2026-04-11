@@ -1,3 +1,4 @@
+import { Input } from '@repo/shadcn-ui/components/input';
 import { Button } from '@repo/ui/button';
 import Image, { type ImageProps } from 'next/image';
 
@@ -51,6 +52,13 @@ export default function Home() {
             </a>{' '}
             center.
           </p>
+          <Input
+            name="name"
+            id="name"
+            placeholder="Buscar héroes, villanos, poderes y equipos..."
+            className="h-12 pl-12 text-lg"
+            autoComplete="off"
+          />
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <Button

@@ -1,3 +1,4 @@
+import '@repo/shadcn-ui/globals.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
