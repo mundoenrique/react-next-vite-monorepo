@@ -8,6 +8,7 @@ dist/
 coverage/
 node_modules/
 shadcn/
+*.d.ts
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
