@@ -7,8 +7,8 @@
   "singleAttributePerLine": false,
   "singleQuote": true,
   "tabWidth": 2,
-  "trailingComma": "es5",
   "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindFunctions": ["cn", "cva"],
   "tailwindStylesheet": "packages/shadcn-ui/src/styles/globals.css",
-  "tailwindFunctions": ["cn", "cva"]
+  "trailingComma": "es5"
 }
