@@ -18,11 +18,11 @@ From this folder:
 npm run dev
 ```
 
-Local port: `http://localhost:3001`.
+Local port: `http://localhost:3000`.
 
 ### Scripts
 
-- `npm run dev`: starts Next on port 3001.
+- `npm run dev`: starts Next on port 3000.
 - `npm run build`: production build.
 - `npm run start`: production server.
 - `npm run lint`: ESLint with `--max-warnings 0`.
@@ -52,11 +52,11 @@ Desde esta carpeta:
 npm run dev
 ```
 
-Puerto local: `http://localhost:3001`.
+Puerto local: `http://localhost:3000`.
 
 ## Scripts
 
-- `npm run dev`: inicia Next en puerto 3001.
+- `npm run dev`: inicia Next en puerto 3000.
 - `npm run build`: build de produccion.
 - `npm run start`: servidor de produccion.
 - `npm run lint`: ESLint con `--max-warnings 0`.
