@@ -8,7 +8,7 @@
   },
   "exports": {
     ".": "./src/index.ts",
-    "./httpRequest": "./src/index.ts",
+    "./httpRequest": "./src/httpRequest.ts",
     "./HttpError": "./src/handleError.ts"
   },
   "dependencies": {
