@@ -1,6 +1,12 @@
+import { HttpError, httpRequest } from '@repo/http-client';
 import { Input } from '@repo/shadcn-ui/components/input';
 import { Button } from '@repo/ui/button';
 import Image, { type ImageProps } from 'next/image';
+
+type Todo = {
+  id: number;
+  title: string;
+};
 
 type Props = Omit<ImageProps, 'src'> & {
   srcLight: string;
@@ -18,7 +24,22 @@ const ThemeImage = (props: Props) => {
   );
 };
 
-export default function Home() {
+export default async function Home() {
+  let requestLabel = 'Unable to load demo data';
+
+  try {
+    const response = await httpRequest<Todo>({
+      url: 'https://jsonplaceholder.typicode.com/todos/1',
+      method: 'GET',
+    });
+
+    requestLabel = `Demo request OK: ${response.data.title}`;
+  } catch (error) {
+    if (error instanceof HttpError) {
+      requestLabel = `Demo request failed: ${error.code} (${String(error.status)})`;
+    }
+  }
+
   return (
     <div className="flex flex-1 flex-col items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex w-full max-w-3xl flex-1 flex-col items-center justify-between bg-white px-16 py-32 sm:items-start dark:bg-black">
@@ -59,6 +80,9 @@ export default function Home() {
             className="h-12 pl-12 text-lg"
             autoComplete="off"
           />
+          <p className="max-w-md rounded-md border border-zinc-200 bg-zinc-100 px-4 py-2 text-sm text-zinc-700 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300">
+            {requestLabel}
+          </p>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <Button

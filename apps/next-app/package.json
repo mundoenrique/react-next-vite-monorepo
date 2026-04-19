@@ -10,6 +10,7 @@
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
+    "@repo/http-client": "^1.0.0",
     "@repo/shadcn-ui": "^1.0.0",
     "@repo/ui": "^1.0.0",
     "next": "16.2.3",

@@ -11,6 +11,7 @@
     "check-types": "tsc -b"
   },
   "dependencies": {
+    "@repo/http-client": "^1.0.0",
     "@repo/shadcn-ui": "^1.0.0",
     "@repo/ui": "^1.0.0",
     "react": "^19.2.4",
