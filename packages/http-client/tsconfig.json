@@ -1,0 +1,7 @@
+{
+  "extends": "@repo/typescript-config/tsconfig.base",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.http-client.tsbuildinfo"
+  },
+  "include": ["src"]
+}
