@@ -3,7 +3,7 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.codeActionsOnSave": { "source.fixAll.eslint": "always" },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": null,
   "editor.detectIndentation": false,
   "editor.formatOnSave": true,
   "editor.formatOnType": false,

@@ -4,7 +4,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "lint": "prettier --check \"*.mjs\" \"README.md\"",
+    "lint": "biome lint --css-linter-enabled=false --config-path ../../biome.json .",
+    "format": "biome format --write --config-path ../../biome.json .",
+    "format:check": "biome format --config-path ../../biome.json .",
     "check-types": "node --check eslint.config.base.mjs && node --check eslint.config.react.mjs && node --check eslint.config.next.mjs && node --check eslint.config.vite.mjs"
   },
   "exports": {
@@ -13,10 +15,7 @@
     "./eslint.next": "./eslint.config.next.mjs",
     "./eslint.vite": "./eslint.config.vite.mjs"
   },
-  "files": [
-    "*.mjs",
-    "*.md"
-  ],
+  "files": ["*.mjs", "*.md"],
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@next/eslint-plugin-next": "^16.2.0",

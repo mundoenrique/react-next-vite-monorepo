@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "lint": "prettier --check \"*.json\" \"README.md\"",
+    "lint": "biome lint --css-linter-enabled=false --config-path ../../biome.json .",
+    "format": "biome format --write --config-path ../../biome.json --vcs-root ../.. .",
+    "format:check": "biome format --config-path ../../biome.json --vcs-root ../.. .",
     "check-types": "node -e \"const fs=require('node:fs'); ['tsconfig.base.json','tsconfig.next.json','tsconfig.vite.app.json','tsconfig.vite.node.json'].forEach((f)=>JSON.parse(fs.readFileSync(f,'utf8')));\""
   },
   "exports": {
@@ -12,7 +14,5 @@
     "./tsconfig.vite.app": "./tsconfig.vite.app.json",
     "./tsconfig.vite.node": "./tsconfig.vite.node.json"
   },
-  "files": [
-    "*.json"
-  ]
+  "files": ["*.json"]
 }

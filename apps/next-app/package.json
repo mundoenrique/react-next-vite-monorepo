@@ -6,7 +6,9 @@
     "dev": "next dev --port 3000",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --max-warnings 0",
+    "lint": "biome lint --css-linter-enabled=false --config-path ../../biome.json src next.config.ts",
+    "format": "biome format --write --config-path ../../biome.json src package.json next.config.ts postcss.config.mjs tsconfig.json",
+    "format:check": "biome format --config-path ../../biome.json src package.json next.config.ts postcss.config.mjs tsconfig.json",
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {

@@ -7,7 +7,9 @@
   },
   "type": "module",
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
+    "lint": "biome lint --css-linter-enabled=false --config-path ../../biome.json .",
+    "format": "biome format --write --config-path ../../biome.json --vcs-root ../.. .",
+    "format:check": "biome format --config-path ../../biome.json --vcs-root ../.. .",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit"
   },

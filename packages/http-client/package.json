@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
+    "lint": "biome lint --css-linter-enabled=false --config-path ../../biome.json .",
+    "format": "biome format --write --config-path ../../biome.json --vcs-root ../.. .",
+    "format:check": "biome format --config-path ../../biome.json --vcs-root ../.. .",
     "check-types": "tsc --noEmit"
   },
   "exports": {

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
+    "lint": "cd ../.. && biome lint --css-linter-enabled=false --config-path ./biome.json packages/shadcn-ui",
+    "format": "cd ../.. && biome format --write --config-path ./biome.json --vcs-root . packages/shadcn-ui",
+    "format:check": "cd ../.. && biome format --config-path ./biome.json --vcs-root . packages/shadcn-ui",
     "check-types": "tsc --noEmit"
   },
   "exports": {
@@ -12,9 +14,7 @@
     "./components/*": "./src/components/*.tsx",
     "./hooks/*": "./src/hooks/*.ts"
   },
-  "sideEffects": [
-    "**/*.css"
-  ],
+  "sideEffects": ["**/*.css"],
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.8",
     "class-variance-authority": "^0.7.1",

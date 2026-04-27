@@ -7,13 +7,14 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "format": "turbo run format",
+    "format:check": "turbo run format:check",
     "check-types": "turbo run check-types",
     "quality:configs:smoke": "turbo run lint check-types --filter=@repo/ui --filter=next-app --filter=next-app2 --filter=vite-app --filter=vite-app2",
     "prepare": "husky"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.4.13",
     "@commitlint/cli": "^20.5.2",
     "@commitlint/config-conventional": "^20.5.0",
     "@types/node": "^25",
@@ -23,8 +24,6 @@
     "globals": "^17",
     "husky": "^9",
     "lint-staged": "^16",
-    "prettier": "^3",
-    "prettier-plugin-tailwindcss": "^0.7.2",
     "turbo": "^2",
     "typescript": "^5"
   },
@@ -32,16 +31,11 @@
     "node": ">=18"
   },
   "packageManager": "npm@11.6.2",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "workspaces": ["apps/*", "packages/*"],
   "lint-staged": {
-    "*.{js,jsx,mjs,cjs,ts,tsx}": [
-      "eslint"
-    ],
+    "*.{js,jsx,mjs,cjs,ts,tsx}": ["biome lint --config-path ./biome.json --no-errors-on-unmatched"],
     "*.{js,jsx,mjs,cjs,ts,tsx,json,md,mdx,css,scss,html,yml,yaml}": [
-      "prettier --check"
+      "biome format --config-path ./biome.json --no-errors-on-unmatched"
     ]
   }
 }
