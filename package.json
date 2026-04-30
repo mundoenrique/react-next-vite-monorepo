@@ -14,8 +14,8 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.5.2",
-    "@commitlint/config-conventional": "^20.5.0",
+    "@commitlint/cli": "^20",
+    "@commitlint/config-conventional": "^20",
     "@types/node": "^25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -24,7 +24,7 @@
     "husky": "^9",
     "lint-staged": "^16",
     "prettier": "^3",
-    "prettier-plugin-tailwindcss": "^0.7.2",
+    "prettier-plugin-tailwindcss": "^0",
     "turbo": "^2",
     "typescript": "^5"
   },
