@@ -1,6 +1,7 @@
+import { HttpError, httpRequest } from '@repo/http-client';
 import { Input } from '@repo/shadcn-ui/components/input';
 import { Button } from '@repo/ui/button';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import './App.css';
 import heroImg from './assets/hero.png';
@@ -10,6 +11,11 @@ import viteLogo from './assets/vite.svg';
 type Props = Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'src'> & {
   srcLight: string;
   srcDark: string;
+};
+
+type Todo = {
+  id: number;
+  title: string;
 };
 
 const ThemeImage = (props: Props) => {
@@ -25,6 +31,41 @@ const ThemeImage = (props: Props) => {
 
 function App() {
   const [count, setCount] = useState(0);
+  const [requestLabel, setRequestLabel] = useState('Loading demo data...');
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadTodo = async () => {
+      try {
+        const response = await httpRequest<Todo>({
+          url: 'https://jsonplaceholder.typicode.com/todos/1',
+          method: 'GET',
+        });
+
+        if (isMounted) {
+          setRequestLabel(`Demo request OK: ${response.data.title}`);
+        }
+      } catch (error) {
+        if (!isMounted) {
+          return;
+        }
+
+        if (error instanceof HttpError) {
+          setRequestLabel(`Demo request failed: ${error.code} (${String(error.status)})`);
+          return;
+        }
+
+        setRequestLabel('Demo request failed with unknown error');
+      }
+    };
+
+    void loadTodo();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   return (
     <>
@@ -66,6 +107,7 @@ function App() {
           className="h-12 pl-12 text-lg"
           autoComplete="off"
         />
+        <p>{requestLabel}</p>
       </section>
 
       <div className="ticks"></div>
