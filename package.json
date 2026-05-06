@@ -11,7 +11,8 @@
     "format:check": "prettier --check .",
     "check-types": "turbo run check-types",
     "quality:configs:smoke": "turbo run lint check-types --filter=@repo/ui --filter=next-app --filter=next-app2 --filter=vite-app --filter=vite-app2",
-    "prepare": "husky"
+    "prepare": "husky",
+    "min-node-version": "node -e \"const fs=require('fs'); const semver=require('semver'); const lock=JSON.parse(fs.readFileSync('package-lock.json','utf8')); const ranges=[...new Set(Object.values(lock.packages||{}).map(p=>p?.engines?.node).filter(Boolean).map(String))]; let min=null; outer: for(let M=0;M<=40;M++){ for(let m=0;m<=30;m++){ for(let p=0;p<=30;p++){ const v=String(M)+'.'+String(m)+'.'+String(p); if(ranges.every(r=>semver.satisfies(v,r))){ min=v; break outer; }}}} console.log('Minimum Node.js version required:',min);\""
   },
   "devDependencies": {
     "@commitlint/cli": "^20",
@@ -22,14 +23,14 @@
     "babel-plugin-react-compiler": "^1",
     "globals": "^17",
     "husky": "^9",
-    "lint-staged": "^16",
+    "lint-staged": "^17",
     "prettier": "^3",
     "prettier-plugin-tailwindcss": "^0",
     "turbo": "^2",
     "typescript": "^5"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22.22.1"
   },
   "packageManager": "npm@11.6.2",
   "workspaces": [
