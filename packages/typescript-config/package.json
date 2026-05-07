@@ -12,7 +12,5 @@
     "./tsconfig.vite.app": "./tsconfig.vite.app.json",
     "./tsconfig.vite.node": "./tsconfig.vite.node.json"
   },
-  "files": [
-    "*.json"
-  ]
+  "files": ["*.json"]
 }

@@ -1,7 +1,7 @@
 import axios, { AxiosHeaders, type AxiosInstance, type AxiosRequestConfig } from 'axios';
 
 import { HttpError } from './handleError';
-import { defaultHeaders, defaultConfig, mergeHeaders } from './httpClientUtils';
+import { defaultConfig, defaultHeaders, mergeHeaders } from './httpClientUtils';
 
 /**
  * Creates an Axios HTTP client instance with the provided configuration.
@@ -40,7 +40,7 @@ export function createHttpClient(requestConfig: AxiosRequestConfig = {}): AxiosI
       message = (error as Error).message || String(error);
 
       throw new HttpError({ message });
-    }
+    },
   );
 
   httpClient.interceptors.response.use(
@@ -61,7 +61,7 @@ export function createHttpClient(requestConfig: AxiosRequestConfig = {}): AxiosI
       message = (error as Error).message || String(error);
 
       throw new HttpError({ message });
-    }
+    },
   );
 
   return httpClient;

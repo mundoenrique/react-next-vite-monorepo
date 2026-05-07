@@ -1,9 +1,9 @@
-import base from './eslint.config.base.mjs';
-import react from './eslint.config.react.mjs';
-import reactRefresh from 'eslint-plugin-react-refresh';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import nextVitals from 'eslint-config-next/core-web-vitals';
 import nextTs from 'eslint-config-next/typescript';
-import { defineConfig, globalIgnores } from 'eslint/config';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import base from './eslint.config.base.mjs';
+import react from './eslint.config.react.mjs';
 
 export default defineConfig([
   ...base,

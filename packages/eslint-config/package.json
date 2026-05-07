@@ -13,10 +13,7 @@
     "./eslint.next": "./eslint.config.next.mjs",
     "./eslint.vite": "./eslint.config.vite.mjs"
   },
-  "files": [
-    "*.mjs",
-    "*.md"
-  ],
+  "files": ["*.mjs", "*.md"],
   "devDependencies": {
     "@eslint/js": "^9",
     "@next/eslint-plugin-next": "^16",

@@ -1,10 +1,10 @@
 import js from '@eslint/js';
-import globals from 'globals';
-import jsdoc from 'eslint-plugin-jsdoc';
-import tseslint from 'typescript-eslint';
-import turboPlugin from 'eslint-plugin-turbo';
-import importPlugin from 'eslint-plugin-import';
 import { defineConfig, globalIgnores } from 'eslint/config';
+import importPlugin from 'eslint-plugin-import';
+import jsdoc from 'eslint-plugin-jsdoc';
+import turboPlugin from 'eslint-plugin-turbo';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 export default defineConfig([
   globalIgnores(['node_modules', 'coverage', '**/*.d.ts', '**/*.d.ts.map']),
