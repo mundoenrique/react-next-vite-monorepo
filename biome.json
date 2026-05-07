@@ -32,7 +32,15 @@
   "linter": {
     "enabled": false,
     "rules": {
-      "recommended": true
+      "recommended": false,
+      "style": {
+        "useImportType": {
+          "level": "warn",
+          "options": {
+            "style": "auto"
+          }
+        }
+      }
     }
   },
   "javascript": {
@@ -58,7 +66,23 @@
     "enabled": true,
     "actions": {
       "source": {
-        "organizeImports": "on"
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              [":URL:", ":NODE:", ":BUN:"],
+              ":BLANK_LINE:",
+              [":PACKAGE:", ":PACKAGE_WITH_PROTOCOL:", "!@repo/**"],
+              ":BLANK_LINE:",
+              ["@repo/**"],
+              ":BLANK_LINE:",
+              [":ALIAS:"],
+              ":BLANK_LINE:",
+              [":PATH:"],
+              ":BLANK_LINE:"
+            ]
+          }
+        }
       }
     }
   }
