@@ -34,7 +34,7 @@
   "packageManager": "npm@11.6.2",
   "workspaces": ["apps/*", "packages/*"],
   "lint-staged": {
-    "*.{js,jsx,mjs,cjs,ts,tsx}": ["eslint"],
-    "*.{js,jsx,mjs,cjs,ts,tsx,json,md,mdx,css,scss,html,yml,yaml}": ["biome check"]
+    "*.{js,jsx,mjs,cjs,ts,tsx}": ["biome lint"],
+    "*.{js,jsx,mjs,cjs,ts,tsx,json,md,mdx,css,scss,html,yml,yaml}": ["biome format"]
   }
 }

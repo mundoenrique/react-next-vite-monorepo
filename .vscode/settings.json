@@ -3,12 +3,12 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit",
     "source.fixAll.biome": "explicit"
   },
   "editor.defaultFormatter": "biomejs.biome",
   "eslint.enable": false,
   "prettier.enable": false,
-
   "editor.detectIndentation": false,
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
