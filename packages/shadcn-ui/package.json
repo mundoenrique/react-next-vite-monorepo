@@ -12,9 +12,7 @@
     "./components/*": "./src/components/*.tsx",
     "./hooks/*": "./src/hooks/*.ts"
   },
-  "sideEffects": [
-    "**/*.css"
-  ],
+  "sideEffects": ["**/*.css"],
   "dependencies": {
     "@fontsource-variable/geist": "^5",
     "class-variance-authority": "^0",

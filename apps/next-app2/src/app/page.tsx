@@ -1,7 +1,8 @@
+import Image, { type ImageProps } from 'next/image';
+
 import { HttpError, httpRequest } from '@repo/http-client';
 import { Input } from '@repo/shadcn-ui/components/input';
 import { Button } from '@repo/ui/button';
-import Image, { type ImageProps } from 'next/image';
 
 type Todo = {
   id: number;

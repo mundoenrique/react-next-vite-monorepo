@@ -1,8 +1,9 @@
-import base from './eslint.config.base.mjs';
-import react from './eslint.config.react.mjs';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import globals from 'globals';
-import { defineConfig, globalIgnores } from 'eslint/config';
+
+import base from './eslint.config.base.mjs';
+import react from './eslint.config.react.mjs';
 
 export default defineConfig([
   ...base,

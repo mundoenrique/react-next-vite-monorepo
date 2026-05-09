@@ -5,7 +5,7 @@ import { createHttpClient } from './createHttpClient';
 const httpClient = createHttpClient();
 
 export function httpRequest<TResponse = unknown, TRequestData = unknown>(
-  requestConfig: AxiosRequestConfig<TRequestData>
+  requestConfig: AxiosRequestConfig<TRequestData>,
 ): Promise<AxiosResponse<TResponse, TRequestData>> {
   const { url, method, data, ...config } = requestConfig;
 
