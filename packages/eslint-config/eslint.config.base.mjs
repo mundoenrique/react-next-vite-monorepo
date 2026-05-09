@@ -1,6 +1,5 @@
 import js from '@eslint/js';
 import { defineConfig, globalIgnores } from 'eslint/config';
-import importPlugin from 'eslint-plugin-import';
 import jsdoc from 'eslint-plugin-jsdoc';
 import turboPlugin from 'eslint-plugin-turbo';
 import globals from 'globals';
@@ -44,7 +43,6 @@ export default defineConfig([
       },
     },
     plugins: {
-      import: importPlugin,
       jsdoc,
     },
     rules: {

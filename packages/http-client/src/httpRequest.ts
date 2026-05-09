@@ -1,4 +1,4 @@
-import { type AxiosRequestConfig, type AxiosResponse } from 'axios';
+import type { AxiosRequestConfig, AxiosResponse } from 'axios';
 
 import { createHttpClient } from './createHttpClient';
 
