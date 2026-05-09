@@ -78,6 +78,17 @@
               ":BLANK_LINE:",
               [":ALIAS:", "!**/*.css", "!**/*.scss"],
               ":BLANK_LINE:",
+              [
+                "vitest",
+                "vitest/**",
+                "@testing-library",
+                "@testing-library/**",
+                "jest",
+                "@jest/**",
+                "!**/*.css",
+                "!**/*.scss"
+              ],
+              ":BLANK_LINE:",
               [":PATH:", "!**/*.css", "!**/*.scss"],
               ":BLANK_LINE:",
               ["**/*.css", "**/*.scss"]
