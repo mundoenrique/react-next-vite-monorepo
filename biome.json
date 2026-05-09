@@ -70,16 +70,17 @@
           "level": "on",
           "options": {
             "groups": [
-              [":URL:", ":NODE:", ":BUN:"],
+              [":URL:", ":NODE:", ":BUN:", "!**/*.css", "!**/*.scss"],
               ":BLANK_LINE:",
-              [":PACKAGE:", ":PACKAGE_WITH_PROTOCOL:", "!@repo/**"],
+              [":PACKAGE:", ":PACKAGE_WITH_PROTOCOL:", "!@repo/**", "!**/*.css", "!**/*.scss"],
               ":BLANK_LINE:",
-              ["@repo/**"],
+              ["@repo/**", "!**/*.css", "!**/*.scss"],
               ":BLANK_LINE:",
-              [":ALIAS:"],
+              [":ALIAS:", "!**/*.css", "!**/*.scss"],
               ":BLANK_LINE:",
-              [":PATH:"],
-              ":BLANK_LINE:"
+              [":PATH:", "!**/*.css", "!**/*.scss"],
+              ":BLANK_LINE:",
+              ["**/*.css", "**/*.scss"]
             ]
           }
         }
