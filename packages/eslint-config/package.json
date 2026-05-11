@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "lint": "biome check .",
+    "lint": "biome lint .",
     "check-types": "node --check eslint.config.base.mjs && node --check eslint.config.react.mjs && node --check eslint.config.next.mjs && node --check eslint.config.vite.mjs"
   },
   "exports": {

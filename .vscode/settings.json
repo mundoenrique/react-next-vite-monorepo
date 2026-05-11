@@ -15,7 +15,7 @@
   "editor.largeFileOptimizations": false,
   "editor.minimap.autohide": "mouseover",
   "editor.renderWhitespace": "all",
-  // "eslint.enable": false,
+  "eslint.enable": false,
   "files.eol": "\n",
   "prettier.enable": false
 }
