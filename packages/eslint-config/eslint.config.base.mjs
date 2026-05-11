@@ -1,5 +1,6 @@
 import js from '@eslint/js';
 import { defineConfig, globalIgnores } from 'eslint/config';
+import importPlugin from 'eslint-plugin-import';
 import jsdoc from 'eslint-plugin-jsdoc';
 import turboPlugin from 'eslint-plugin-turbo';
 import globals from 'globals';
@@ -43,6 +44,7 @@ export default defineConfig([
       },
     },
     plugins: {
+      import: importPlugin,
       jsdoc,
     },
     rules: {
@@ -52,6 +54,38 @@ export default defineConfig([
       '@typescript-eslint/no-floating-promises': 'error',
       '@typescript-eslint/no-misused-promises': 'error',
       '@typescript-eslint/consistent-type-imports': ['warn', { prefer: 'type-imports' }],
+      'import/order': [
+        'warn',
+        {
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
+          pathGroups: [
+            {
+              pattern: '%/**',
+              group: 'internal',
+              position: 'after',
+            },
+            {
+              pattern: '@/**',
+              group: 'internal',
+              position: 'before',
+            },
+            {
+              pattern: '@shadcn/**',
+              group: 'external',
+              position: 'after',
+            },
+            {
+              pattern: '@tests/**',
+              group: 'parent',
+              position: 'before',
+            },
+          ],
+          pathGroupsExcludedImportTypes: ['builtin', 'object', 'type'],
+          warnOnUnassignedImports: true,
+          'newlines-between': 'always',
+          alphabetize: { order: 'asc', caseInsensitive: true },
+        },
+      ],
       'jsdoc/require-jsdoc': 'off',
       // Future tightening: promote these to "error" after documentation baseline is stable.
       'jsdoc/require-description-complete-sentence': 'warn',
