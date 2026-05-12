@@ -3,7 +3,7 @@ echo ">>> HUSKY COMMIT-MSG RUNNING <<<"
 echo "Validating commit message with commitlint."
 echo ""
 
-if ! npx --no -- commitlint --edit "$1"; then
+if ! npx --no -- commitlint --edit $1; then
 	echo ""
 	echo ">>> HUSKY COMMIT-MSG FAILED <<<"
 	echo "Review allowed types and examples in:"

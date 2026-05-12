@@ -15,8 +15,8 @@
     "min-node-version": "node -e \"const fs=require('fs'); const semver=require('semver'); const lock=JSON.parse(fs.readFileSync('package-lock.json','utf8')); const ranges=[...new Set(Object.values(lock.packages||{}).map(p=>p?.engines?.node).filter(Boolean).map(String))]; let min=null; outer: for(let M=0;M<=40;M++){ for(let m=0;m<=30;m++){ for(let p=0;p<=30;p++){ const v=String(M)+'.'+String(m)+'.'+String(p); if(ranges.every(r=>semver.satisfies(v,r))){ min=v; break outer; }}}} console.log('Minimum Node.js version required:',min);\""
   },
   "devDependencies": {
-    "@commitlint/cli": "^20",
-    "@commitlint/config-conventional": "^20",
+    "@commitlint/cli": "^21",
+    "@commitlint/config-conventional": "^21",
     "@types/node": "^25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
