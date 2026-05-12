@@ -6,6 +6,7 @@
     "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
+    "prod": "next start --port 3011",
     "lint": "biome lint .",
     "check-types": "next typegen && tsc --noEmit"
   },

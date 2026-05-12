@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "biome lint .",
     "preview": "vite preview",
+    "prod": "vite preview --port 4174",
     "check-types": "tsc -b"
   },
   "dependencies": {
