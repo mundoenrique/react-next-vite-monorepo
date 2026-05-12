@@ -1,0 +1,23 @@
+{
+  "extends": "//",
+  "linter": {
+    "rules": {
+      "correctness": {
+        "noNextAsyncClientComponent": "warn"
+      },
+      "performance": {
+        "noImgElement": "warn",
+        "noUnwantedPolyfillio": "warn",
+        "useGoogleFontPreconnect": "warn"
+      },
+      "style": {
+        "noHeadElement": "warn"
+      },
+      "suspicious": {
+        "noDocumentImportInPage": "error",
+        "noHeadImportInDocument": "error",
+        "useGoogleFontDisplay": "warn"
+      }
+    }
+  }
+}

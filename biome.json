@@ -6,7 +6,7 @@
     "useIgnoreFile": true
   },
   "files": {
-    "ignoreUnknown": false,
+    "ignoreUnknown": true,
     "includes": [
       "**",
       "!**/*.d.ts",
@@ -68,7 +68,7 @@
         "noUnusedPrivateClassMembers": "error",
         "noUnusedVariables": "error",
         "useIsNan": "error",
-        "useSingleJsDocAsterisk": "warn",
+        "useSingleJsDocAsterisk": "error",
         "useValidForDirection": "error",
         "useValidTypeof": "error",
         "useYield": "error"
