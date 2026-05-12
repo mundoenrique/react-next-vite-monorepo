@@ -2,8 +2,14 @@
   "extends": "//",
   "linter": {
     "rules": {
+      "complexity": {},
       "correctness": {
         "noNextAsyncClientComponent": "warn"
+      },
+      "nursery": {
+        "noBeforeInteractiveScriptOutsideDocument": "warn",
+        "noSyncScripts": "error",
+        "useInlineScriptId": "error"
       },
       "performance": {
         "noImgElement": "warn",
@@ -14,10 +20,427 @@
         "noHeadElement": "warn"
       },
       "suspicious": {
+        "useGoogleFontDisplay": "warn",
         "noDocumentImportInPage": "error",
-        "noHeadImportInDocument": "error",
-        "useGoogleFontDisplay": "warn"
+        "noHeadImportInDocument": "error"
       }
     }
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.{ts,tsx}", "**/*.{test,spec}.{ts,tsx}"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noChildrenProp": "error",
+            "useJsxKeyInIterable": "error"
+          },
+          "nursery": {
+            "noReactStringRefs": "error",
+            "noUnknownAttribute": "error"
+          },
+          "security": {
+            "noBlankTarget": "error",
+            "noDangerouslySetInnerHtmlWithChildren": "error"
+          },
+          "suspicious": {
+            "noCommentText": "error",
+            "noDuplicateJsxProps": "error"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/*.{ts,tsx}", "**/*.{test,spec}.{ts,tsx}"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "useExhaustiveDependencies": "warn",
+            "useHookAtTopLevel": "error"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/*.{ts,tsx}", "**/*.{test,spec}.{ts,tsx}"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noNestedComponentDefinitions": "error",
+            "useJsxKeyInIterable": "error"
+          },
+          "suspicious": {
+            "noArrayIndexKey": "warn",
+            "noReactForwardRef": "warn"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/*.{ts,tsx}", "**/*.{test,spec}.{ts,tsx}"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noNestedComponentDefinitions": "error",
+            "useJsxKeyInIterable": "error"
+          },
+          "suspicious": {
+            "noArrayIndexKey": "warn",
+            "noReactForwardRef": "warn"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/*.{ts,tsx}", "**/*.{test,spec}.{ts,tsx}"],
+      "linter": {
+        "rules": {
+          "correctness": { "noVoidElementsWithChildren": "error" },
+          "nursery": { "noScriptUrl": "warn" },
+          "security": {
+            "noDangerouslySetInnerHtml": "warn",
+            "noDangerouslySetInnerHtmlWithChildren": "error"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/*.{ts,tsx}", "**/*.{test,spec}.{ts,tsx}"],
+      "linter": {
+        "rules": { "style": { "useComponentExportOnlyModules": "error" } }
+      }
+    },
+    {
+      "includes": ["**/*.{ts,tsx}", "**/*.{test,spec}.{ts,tsx}"],
+      "javascript": {
+        "globals": [
+          "onanimationend",
+          "onabortpayment",
+          "ongamepadconnected",
+          "onlostpointercapture",
+          "onanimationiteration",
+          "onkeyup",
+          "onmousedown",
+          "onanimationstart",
+          "onslotchange",
+          "onprogress",
+          "ontransitionstart",
+          "onpause",
+          "onended",
+          "onpointerover",
+          "onscrollend",
+          "onformdata",
+          "ontransitionrun",
+          "onanimationcancel",
+          "ondrag",
+          "oninstall",
+          "onbeforeinstallprompt",
+          "onbeforexrselect",
+          "onmessage",
+          "ontransitioncancel",
+          "onpointerdown",
+          "onchange",
+          "onabort",
+          "onpointerout",
+          "oncuechange",
+          "ongotpointercapture",
+          "onscrollsnapchanging",
+          "onsearch",
+          "onsubmit",
+          "onstalled",
+          "onsuspend",
+          "onreset",
+          "onerror",
+          "onmouseenter",
+          "ongamepaddisconnected",
+          "ondragover",
+          "onresize",
+          "onbeforetoggle",
+          "onmouseover",
+          "onpagehide",
+          "onmousemove",
+          "onratechange",
+          "oncommand",
+          "onmessageerror",
+          "onwheel",
+          "ondevicemotion",
+          "onauxclick",
+          "ontransitionend",
+          "onpaste",
+          "onpageswap",
+          "onkeydown",
+          "ondeviceorientationabsolute",
+          "ononline",
+          "onclose",
+          "onselect",
+          "onpaymentrequest",
+          "onpageshow",
+          "onactivate",
+          "onpointercancel",
+          "onbeforematch",
+          "onpointerrawupdate",
+          "ondragleave",
+          "onscrollsnapchange",
+          "onseeked",
+          "onwaiting",
+          "onbeforeunload",
+          "onplaying",
+          "onvolumechange",
+          "onnotificationclose",
+          "onbackgroundfetchfail",
+          "ondragend",
+          "onstorage",
+          "onloadeddata",
+          "onfocus",
+          "onoffline",
+          "onplay",
+          "onbackgroundfetchclick",
+          "onafterprint",
+          "onclick",
+          "oncut",
+          "onmouseout",
+          "ondblclick",
+          "oncanplay",
+          "onloadstart",
+          "onpushsubscriptionchange",
+          "onappinstalled",
+          "onpointermove",
+          "ontoggle",
+          "oncontextmenu",
+          "onblur",
+          "onperiodicsync",
+          "oncookiechange",
+          "oncancel",
+          "onbeforeprint",
+          "oncontextrestored",
+          "onnotificationclick",
+          "onloadedmetadata",
+          "onpointerup",
+          "onlanguagechange",
+          "oncopy",
+          "onselectstart",
+          "onscroll",
+          "onload",
+          "ondragstart",
+          "onbeforeinput",
+          "oncanplaythrough",
+          "oninput",
+          "oninvalid",
+          "ontimeupdate",
+          "ondurationchange",
+          "onselectionchange",
+          "onmouseup",
+          "location",
+          "onkeypress",
+          "onpointerleave",
+          "oncontextlost",
+          "ondrop",
+          "onsecuritypolicyviolation",
+          "oncontentvisibilityautostatechange",
+          "onsync",
+          "onpush",
+          "ondeviceorientation",
+          "onbackgroundfetchabort",
+          "onseeking",
+          "onbackgroundfetchsuccess",
+          "onfetch",
+          "oncanmakepayment",
+          "onrejectionhandled",
+          "onunload",
+          "onmouseleave",
+          "onhashchange",
+          "onpointerenter",
+          "onmousewheel",
+          "onunhandledrejection",
+          "ondragenter",
+          "onpopstate",
+          "onpagereveal",
+          "onemptied"
+        ]
+      },
+      "linter": { "rules": {} }
+    },
+    {
+      "includes": ["**/*.{js,jsx,mjs,ts,tsx,mts,cts}"],
+      "javascript": {
+        "globals": [
+          "onanimationend",
+          "exports",
+          "ongamepadconnected",
+          "onlostpointercapture",
+          "onanimationiteration",
+          "onkeyup",
+          "onmousedown",
+          "onanimationstart",
+          "onslotchange",
+          "onprogress",
+          "ontransitionstart",
+          "onpause",
+          "onended",
+          "onpointerover",
+          "onscrollend",
+          "onformdata",
+          "ontransitionrun",
+          "onanimationcancel",
+          "ondrag",
+          "onchange",
+          "onbeforeinstallprompt",
+          "onbeforexrselect",
+          "onmessage",
+          "ontransitioncancel",
+          "onpointerdown",
+          "onabort",
+          "onpointerout",
+          "oncuechange",
+          "ongotpointercapture",
+          "onscrollsnapchanging",
+          "onsearch",
+          "onsubmit",
+          "onstalled",
+          "onsuspend",
+          "onreset",
+          "onerror",
+          "onmouseenter",
+          "ongamepaddisconnected",
+          "onresize",
+          "ondragover",
+          "onbeforetoggle",
+          "onmouseover",
+          "onpagehide",
+          "onmousemove",
+          "onratechange",
+          "oncommand",
+          "onmessageerror",
+          "onwheel",
+          "ondevicemotion",
+          "onauxclick",
+          "ontransitionend",
+          "onpaste",
+          "onpageswap",
+          "ononline",
+          "ondeviceorientationabsolute",
+          "onkeydown",
+          "onclose",
+          "onselect",
+          "onpageshow",
+          "onpointercancel",
+          "onbeforematch",
+          "onpointerrawupdate",
+          "ondragleave",
+          "onscrollsnapchange",
+          "onseeked",
+          "onwaiting",
+          "onbeforeunload",
+          "onplaying",
+          "onvolumechange",
+          "ondragend",
+          "onstorage",
+          "onloadeddata",
+          "onfocus",
+          "onoffline",
+          "onplay",
+          "onafterprint",
+          "onclick",
+          "oncut",
+          "onmouseout",
+          "ondblclick",
+          "oncanplay",
+          "onloadstart",
+          "onappinstalled",
+          "onpointermove",
+          "ontoggle",
+          "oncontextmenu",
+          "onblur",
+          "oncancel",
+          "onbeforeprint",
+          "oncontextrestored",
+          "onloadedmetadata",
+          "onpointerup",
+          "onlanguagechange",
+          "oncopy",
+          "onselectstart",
+          "onscroll",
+          "onload",
+          "ondragstart",
+          "onbeforeinput",
+          "oncanplaythrough",
+          "oninput",
+          "oninvalid",
+          "ontimeupdate",
+          "ondurationchange",
+          "onselectionchange",
+          "onmouseup",
+          "location",
+          "onkeypress",
+          "onpointerleave",
+          "oncontextlost",
+          "ondrop",
+          "onsecuritypolicyviolation",
+          "oncontentvisibilityautostatechange",
+          "ondeviceorientation",
+          "onseeking",
+          "onrejectionhandled",
+          "onunload",
+          "onmouseleave",
+          "onhashchange",
+          "onpointerenter",
+          "onmousewheel",
+          "onunhandledrejection",
+          "ondragenter",
+          "onpopstate",
+          "onpagereveal",
+          "onemptied"
+        ]
+      },
+      "linter": {
+        "rules": {
+          "a11y": {
+            "noAriaUnsupportedElements": "warn",
+            "useAltText": "warn",
+            "useAriaPropsForRole": "warn",
+            "useAriaPropsSupportedByRole": "warn",
+            "useValidAriaProps": "warn",
+            "useValidAriaValues": "warn"
+          },
+          "correctness": {
+            "noChildrenProp": "error",
+            "noNextAsyncClientComponent": "warn",
+            "useExhaustiveDependencies": "warn",
+            "useHookAtTopLevel": "error",
+            "useJsxKeyInIterable": "error"
+          },
+          "nursery": {
+            "noBeforeInteractiveScriptOutsideDocument": "warn",
+            "noReactStringRefs": "error",
+            "noSyncScripts": "warn",
+            "noUnknownAttribute": "off",
+            "useInlineScriptId": "error"
+          },
+          "performance": {
+            "noImgElement": "warn",
+            "noUnwantedPolyfillio": "warn",
+            "useGoogleFontPreconnect": "warn"
+          },
+          "security": {
+            "noBlankTarget": "off",
+            "noDangerouslySetInnerHtmlWithChildren": "error"
+          },
+          "style": { "noHeadElement": "warn" },
+          "suspicious": {
+            "noCommentText": "error",
+            "noDocumentImportInPage": "error",
+            "noDuplicateJsxProps": "error",
+            "noHeadImportInDocument": "error",
+            "useGoogleFontDisplay": "warn"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/*.{ts,tsx}", "**/*.{test,spec}.{ts,tsx}"],
+      "linter": {
+        "rules": { "style": { "useComponentExportOnlyModules": "error" } }
+      }
+    }
+  ]
 }

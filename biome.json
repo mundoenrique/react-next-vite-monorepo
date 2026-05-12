@@ -96,12 +96,7 @@
         "useAsConstAssertion": "error",
         "useBlockStatements": "error",
         "useConst": "error",
-        "useImportType": {
-          "level": "warn",
-          "options": {
-            "style": "auto"
-          }
-        },
+        "useImportType": { "level": "warn", "options": { "style": "auto" } },
         "useLiteralEnumMembers": "error",
         "useThrowOnlyError": "error",
         "useUnifiedTypeSignatures": "error"
@@ -118,12 +113,7 @@
         "noControlCharactersInRegex": "error",
         "noDebugger": "error",
         "noDeprecatedImports": "warn",
-        "noDoubleEquals": {
-          "level": "error",
-          "options": {
-            "ignoreNull": false
-          }
-        },
+        "noDoubleEquals": { "level": "error", "options": { "ignoreNull": false } },
         "noDuplicateCase": "error",
         "noDuplicateClassMembers": "error",
         "noDuplicateElseIf": "error",
@@ -185,7 +175,7 @@
       }
     },
     {
-      "includes": ["**/*.{ts,tsx}", "**/*.{test,spec}.{ts,tsx}"],
+      "includes": ["**/*.{js,mjs,cjs,ts,tsx,mts,cts}", "**/*.{test,spec}.{ts,tsx}"],
       "linter": {
         "rules": {
           "correctness": {
@@ -198,17 +188,10 @@
             "noUnreachable": "off",
             "noUnreachableSuper": "off"
           },
-          "style": {
-            "useBlockStatements": "off"
-          },
+          "style": { "useBlockStatements": "off" },
           "suspicious": {
             "noClassAssign": "off",
-            "noConsole": {
-              "level": "error",
-              "options": {
-                "allow": ["warn", "error"]
-              }
-            },
+            "noConsole": { "level": "error", "options": { "allow": ["warn", "error"] } },
             "noDuplicateClassMembers": "off",
             "noDuplicateObjectKeys": "off",
             "noDuplicateParameters": "off",
@@ -226,15 +209,9 @@
       "includes": ["**/*.{test,spec}.{ts,tsx}"],
       "linter": {
         "rules": {
-          "nursery": {
-            "noMisusedPromises": "off"
-          },
-          "style": {
-            "noNonNullAssertion": "off"
-          },
-          "suspicious": {
-            "noExplicitAny": "off"
-          }
+          "nursery": { "noMisusedPromises": "off" },
+          "style": { "noNonNullAssertion": "off" },
+          "suspicious": { "noExplicitAny": "off" }
         }
       }
     },
@@ -242,10 +219,7 @@
       "includes": ["**/*.d.ts"],
       "linter": {
         "rules": {
-          "complexity": {
-            "useLiteralKeys": "off",
-            "useOptionalChain": "off"
-          },
+          "complexity": { "useLiteralKeys": "off", "useOptionalChain": "off" },
           "nursery": {
             "noFloatingPromises": "off",
             "noForIn": "off",
@@ -267,19 +241,11 @@
           "style": {
             "useExportType": "off",
             "useImportType": "off",
-            "useNamingConvention": {
-              "level": "off",
-              "options": {
-                "strictCase": false,
-                "requireAscii": false
-              }
-            },
+            "useNamingConvention": { "level": "off", "options": { "strictCase": false, "requireAscii": false } },
             "useReadonlyClassProperties": "off",
             "useThrowOnlyError": "off"
           },
-          "suspicious": {
-            "useAwait": "off"
-          }
+          "suspicious": { "useAwait": "off" }
         }
       }
     }

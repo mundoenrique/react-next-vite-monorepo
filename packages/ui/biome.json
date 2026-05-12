@@ -1,7 +1,16 @@
 {
   "extends": "//",
-  "files": { "includes": ["!**/src/**/*"] },
   "overrides": [
+    {
+      "includes": ["**/*.d.ts"],
+      "linter": {
+        "rules": {
+          "nursery": {
+            "useRegexpExec": "off"
+          }
+        }
+      }
+    },
     {
       "includes": ["**/*.{ts,tsx}", "**/*.{test,spec}.{ts,tsx}"],
       "linter": {
