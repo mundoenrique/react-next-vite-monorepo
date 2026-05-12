@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint . --max-warnings 0",
     "preview": "vite preview",
+    "prod": "vite preview --port 4174",
     "check-types": "tsc -b"
   },
   "dependencies": {
