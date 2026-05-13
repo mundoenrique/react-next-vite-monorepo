@@ -6,7 +6,7 @@
     "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
-    "prod": "next start --port 3011",
+    "prod": "next start --port 3101",
     "lint": "biome lint .",
     "check-types": "next typegen && tsc --noEmit"
   },
@@ -19,6 +19,7 @@
     "react-dom": "^19"
   },
   "devDependencies": {
+    "@repo/biome-config": "^1.0.0",
     "@repo/eslint-config": "^1.0.0",
     "@repo/typescript-config": "^1.0.0",
     "@tailwindcss/postcss": "^4",

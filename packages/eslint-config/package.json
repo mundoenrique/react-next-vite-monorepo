@@ -15,6 +15,7 @@
   },
   "files": ["*.mjs", "*.md"],
   "devDependencies": {
+    "@repo/biome-config": "^1.0.0",
     "@eslint/js": "^9",
     "@next/eslint-plugin-next": "^16",
     "eslint": "^9",

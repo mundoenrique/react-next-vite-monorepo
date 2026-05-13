@@ -1,0 +1,10 @@
+{
+  "overrides": [
+    {
+      "includes": ["vite.config.ts"],
+      "javascript": {
+        "globals": ["exports"]
+      }
+    }
+  ]
+}

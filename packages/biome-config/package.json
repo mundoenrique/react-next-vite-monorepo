@@ -1,0 +1,13 @@
+{
+  "name": "@repo/biome-config",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./base": "./biome-base.json",
+    "./react": "./biome.react.json",
+    "./next": "./biome.next.json",
+    "./vite": "./biome.vite.json"
+  },
+  "files": ["*.json"]
+}

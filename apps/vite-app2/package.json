@@ -12,12 +12,14 @@
     "check-types": "tsc -b"
   },
   "dependencies": {
+    "@repo/http-client": "^1.0.0",
     "@repo/shadcn-ui": "^1.0.0",
     "@repo/ui": "^1.0.0",
     "react": "^19",
     "react-dom": "^19"
   },
   "devDependencies": {
+    "@repo/biome-config": "^1.0.0",
     "@babel/core": "^7",
     "@repo/eslint-config": "^1.0.0",
     "@repo/typescript-config": "^1.0.0",

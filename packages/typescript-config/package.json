@@ -12,5 +12,8 @@
     "./tsconfig.vite.app": "./tsconfig.vite.app.json",
     "./tsconfig.vite.node": "./tsconfig.vite.node.json"
   },
-  "files": ["*.json"]
+  "files": ["*.json"],
+  "devDependencies": {
+    "@repo/biome-config": "^1.0.0"
+  }
 }

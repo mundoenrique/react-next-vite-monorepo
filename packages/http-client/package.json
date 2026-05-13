@@ -15,6 +15,7 @@
     "axios": "^1"
   },
   "devDependencies": {
+    "@repo/biome-config": "^1.0.0",
     "@repo/eslint-config": "^1.0.0",
     "@repo/typescript-config": "^1.0.0"
   }

@@ -4,10 +4,11 @@ import { HttpError, httpRequest } from '@repo/http-client';
 import { Input } from '@repo/shadcn-ui/components/input';
 import { Button } from '@repo/ui/button';
 
-import './App.css';
 import heroImg from './assets/hero.png';
 import reactLogo from './assets/react.svg';
 import viteLogo from './assets/vite.svg';
+
+import './App.css';
 
 type Props = Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'src'> & {
   srcLight: string;

@@ -1,0 +1,191 @@
+{
+  "linter": {
+    "rules": {
+      "correctness": {
+        "noNextAsyncClientComponent": "warn"
+      },
+      "nursery": {
+        "noBeforeInteractiveScriptOutsideDocument": "warn",
+        "noSyncScripts": "error",
+        "useInlineScriptId": "error"
+      },
+      "performance": {
+        "noImgElement": "warn",
+        "noUnwantedPolyfillio": "warn",
+        "useGoogleFontPreconnect": "warn"
+      },
+      "style": {
+        "noHeadElement": "warn"
+      },
+      "suspicious": {
+        "useGoogleFontDisplay": "warn",
+        "noDocumentImportInPage": "error",
+        "noHeadImportInDocument": "error"
+      }
+    }
+  },
+  "javascript": {
+    "globals": [
+      "onanimationend",
+      "exports",
+      "ongamepadconnected",
+      "onlostpointercapture",
+      "onanimationiteration",
+      "onkeyup",
+      "onmousedown",
+      "onanimationstart",
+      "onslotchange",
+      "onprogress",
+      "ontransitionstart",
+      "onpause",
+      "onended",
+      "onpointerover",
+      "onscrollend",
+      "onformdata",
+      "ontransitionrun",
+      "onanimationcancel",
+      "ondrag",
+      "onchange",
+      "onbeforeinstallprompt",
+      "onbeforexrselect",
+      "onmessage",
+      "ontransitioncancel",
+      "onpointerdown",
+      "onabort",
+      "onpointerout",
+      "oncuechange",
+      "ongotpointercapture",
+      "onscrollsnapchanging",
+      "onsearch",
+      "onsubmit",
+      "onstalled",
+      "onsuspend",
+      "onreset",
+      "onerror",
+      "onmouseenter",
+      "ongamepaddisconnected",
+      "onresize",
+      "ondragover",
+      "onbeforetoggle",
+      "onmouseover",
+      "onpagehide",
+      "onmousemove",
+      "onratechange",
+      "oncommand",
+      "onmessageerror",
+      "onwheel",
+      "ondevicemotion",
+      "onauxclick",
+      "ontransitionend",
+      "onpaste",
+      "onpageswap",
+      "ononline",
+      "ondeviceorientationabsolute",
+      "onkeydown",
+      "onclose",
+      "onselect",
+      "onpageshow",
+      "onpointercancel",
+      "onbeforematch",
+      "onpointerrawupdate",
+      "ondragleave",
+      "onscrollsnapchange",
+      "onseeked",
+      "onwaiting",
+      "onbeforeunload",
+      "onplaying",
+      "onvolumechange",
+      "ondragend",
+      "onstorage",
+      "onloadeddata",
+      "onfocus",
+      "onoffline",
+      "onplay",
+      "onafterprint",
+      "onclick",
+      "oncut",
+      "onmouseout",
+      "ondblclick",
+      "oncanplay",
+      "onloadstart",
+      "onappinstalled",
+      "onpointermove",
+      "ontoggle",
+      "oncontextmenu",
+      "onblur",
+      "oncancel",
+      "onbeforeprint",
+      "oncontextrestored",
+      "onloadedmetadata",
+      "onpointerup",
+      "onlanguagechange",
+      "oncopy",
+      "onselectstart",
+      "onscroll",
+      "onload",
+      "ondragstart",
+      "onbeforeinput",
+      "oncanplaythrough",
+      "oninput",
+      "oninvalid",
+      "ontimeupdate",
+      "ondurationchange",
+      "onselectionchange",
+      "onmouseup",
+      "location",
+      "onkeypress",
+      "onpointerleave",
+      "oncontextlost",
+      "ondrop",
+      "onsecuritypolicyviolation",
+      "oncontentvisibilityautostatechange",
+      "ondeviceorientation",
+      "onseeking",
+      "onrejectionhandled",
+      "onunload",
+      "onmouseleave",
+      "onhashchange",
+      "onpointerenter",
+      "onmousewheel",
+      "onunhandledrejection",
+      "ondragenter",
+      "onpopstate",
+      "onpagereveal",
+      "onemptied"
+    ]
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.{js,jsx,mjs,ts,tsx,mts,cts}"],
+      "linter": {
+        "rules": {
+          "a11y": {
+            "noAriaUnsupportedElements": "warn",
+            "useAltText": "warn",
+            "useAriaPropsForRole": "warn",
+            "useAriaPropsSupportedByRole": "warn",
+            "useValidAriaProps": "warn",
+            "useValidAriaValues": "warn"
+          },
+          "nursery": {
+            "noSyncScripts": "warn",
+            "noUnknownAttribute": "off"
+          },
+          "security": {
+            "noBlankTarget": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/*.{tsx}"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useComponentExportOnlyModules": "off"
+          }
+        }
+      }
+    }
+  ]
+}

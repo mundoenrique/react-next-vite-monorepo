@@ -19,6 +19,7 @@
     "react-dom": "^19"
   },
   "devDependencies": {
+    "@repo/biome-config": "^1.0.0",
     "@babel/core": "^7",
     "@repo/eslint-config": "^1.0.0",
     "@repo/typescript-config": "^1.0.0",
