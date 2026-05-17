@@ -1,5 +1,4 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.4.14/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -7,15 +6,7 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": [
-      "**",
-      "!**/*.d.ts",
-      "!**/*.d.ts.map",
-      "!**/package-lock.json",
-      "!**/pnpm-lock.yaml",
-      "!**/yarn.lock",
-      "!**/shadcn-ui/src/**/*"
-    ]
+    "includes": ["**", "!**/package-lock.json", "!**/pnpm-lock.yaml", "!**/yarn.lock", "!**/shadcn-ui/src/**/*"]
   },
   "formatter": {
     "enabled": true,
@@ -91,6 +82,7 @@
       "style": {
         "noCommonJs": "error",
         "noNamespace": "error",
+        "noNestedTernary": "error",
         "noNonNullAssertion": "error",
         "useArrayLiterals": "error",
         "useAsConstAssertion": "error",
@@ -112,7 +104,7 @@
         "noConstantBinaryExpressions": "error",
         "noControlCharactersInRegex": "error",
         "noDebugger": "error",
-        "noDeprecatedImports": "warn",
+        "noDeprecatedImports": "error",
         "noDoubleEquals": { "level": "error", "options": { "ignoreNull": false } },
         "noDuplicateCase": "error",
         "noDuplicateClassMembers": "error",
@@ -137,7 +129,7 @@
         "noTsIgnore": "error",
         "noUnsafeDeclarationMerging": "error",
         "noUnsafeNegation": "error",
-        "noUnusedExpressions": "off",
+        "noUnusedExpressions": "error",
         "noUselessRegexBackrefs": "error",
         "noVar": "error",
         "noWith": "error",
@@ -178,29 +170,8 @@
       "includes": ["**/*.{js,mjs,cjs,ts,tsx,mts,cts}", "**/*.{test,spec}.{ts,tsx}"],
       "linter": {
         "rules": {
-          "correctness": {
-            "noConstAssign": "off",
-            "noGlobalObjectCalls": "off",
-            "noInvalidBuiltinInstantiation": "off",
-            "noInvalidConstructorSuper": "off",
-            "noSetterReturn": "off",
-            "noUndeclaredVariables": "off",
-            "noUnreachable": "off",
-            "noUnreachableSuper": "off"
-          },
-          "style": { "useBlockStatements": "off" },
           "suspicious": {
-            "noClassAssign": "off",
-            "noConsole": { "level": "error", "options": { "allow": ["warn", "error"] } },
-            "noDuplicateClassMembers": "off",
-            "noDuplicateObjectKeys": "off",
-            "noDuplicateParameters": "off",
-            "noFunctionAssign": "off",
-            "noImportAssign": "off",
-            "noRedeclare": "off",
-            "noUnsafeNegation": "off",
-            "noWith": "off",
-            "useGetterReturn": "off"
+            "noConsole": { "level": "error", "options": { "allow": ["warn", "error"] } }
           }
         }
       }
@@ -209,9 +180,9 @@
       "includes": ["**/*.{test,spec}.{ts,tsx}"],
       "linter": {
         "rules": {
-          "nursery": { "noMisusedPromises": "off" },
-          "style": { "noNonNullAssertion": "off" },
-          "suspicious": { "noExplicitAny": "off" }
+          "nursery": { "noMisusedPromises": "error" },
+          "style": { "noNonNullAssertion": "error" },
+          "suspicious": { "noExplicitAny": "error" }
         }
       }
     },

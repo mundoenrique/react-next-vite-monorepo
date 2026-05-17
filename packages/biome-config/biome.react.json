@@ -161,21 +161,21 @@
           "nursery": {
             "noReactStringRefs": "error",
             "noUnknownAttribute": "error",
-            "noScriptUrl": "warn"
+            "noScriptUrl": "error"
           },
           "security": {
             "noBlankTarget": "error",
-            "noDangerouslySetInnerHtml": "warn",
+            "noDangerouslySetInnerHtml": "error",
             "noDangerouslySetInnerHtmlWithChildren": "error"
           },
           "style": {
             "useComponentExportOnlyModules": "error"
           },
           "suspicious": {
-            "noArrayIndexKey": "warn",
+            "noArrayIndexKey": "error",
             "noCommentText": "error",
             "noDuplicateJsxProps": "error",
-            "noReactForwardRef": "warn"
+            "noReactForwardRef": "error"
           }
         }
       }
